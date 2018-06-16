@@ -3,9 +3,13 @@ var router = express.Router();
 var Category = require('../model/db').Category;
 var Video = require('../model/db').Video;
 var Request = require('../model/db').Request;
+var User = require('../model/db').User;
+var Reply = require('../model/db').Reply;
 
 router.get('/category', (req, res, next) => {
-  Category.findAll().then(category => res.json(category))
+  Category.findAll().then(category => {
+    res.json(category)
+  })
 });
 
 router.get('/topVideos', (req, res, next) => {
@@ -30,6 +34,7 @@ router.get('/requestVideos/:cid', (req, res, next) => {
 
 router.post('/requestVideo', (req, res, next) => {
   var title = req.body.title;
+  var desc = req.body.desc;
   var uid = req.body.uid;
   var deadline = req.body.deadline;
   var price = req.body.price;
@@ -37,6 +42,7 @@ router.post('/requestVideo', (req, res, next) => {
 
   Request.create({
     title: title,
+    desc: desc,
     uid: uid,
     deadline: deadline,
     price: price,
@@ -64,5 +70,17 @@ router.get('/video/:vid', (req, res, next) => {
     where: { vid: vid }
   }).then(video => res.json(video))
 });
+
+router.post('/reply', (req, res, next) => {
+  var uid = req.body.uid;
+  var rid = req.body.rid;
+  var text = req.body.text;
+
+  Reply.create({
+    uid: uid,
+    rid: rid,
+    text: text,
+  }).then(resp => res.json('success write reply'))
+})
 
 module.exports = router;

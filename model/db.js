@@ -3,56 +3,52 @@ var Sequelize = require('sequelize');
 const sequelize = new Sequelize(db, { autoIncrement: true });
 
 const SCHEMA_OPTIONS = { timestamps: false, freezeTableName: true }
-const SCHEMA_ID = { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }
-const SCHEMA_STRING = { type: Sequelize.STRING, allowNull: false }
-const SCHEMA_DATE = { type: Sequelize.DATE, allowNull: false }
-const SCHEMA_INTEGER = { type: Sequelize.INTEGER, allowNull: false }
 
 var User = sequelize.define('user', {
-    uid: SCHEMA_ID,
-    name: SCHEMA_STRING,
-    email: SCHEMA_STRING,
-    thumnail: SCHEMA_STRING,
-    finishedStremingCount: SCHEMA_INTEGER,
-    totalHits: SCHEMA_INTEGER,
-    score: SCHEMA_INTEGER
+    uid: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: Sequelize.STRING, allowNull: false },
+    email: { type: Sequelize.STRING, allowNull: false },
+    thumbnail: { type: Sequelize.STRING, allowNull: false },
+    streamCount: { type: Sequelize.INTEGER, allowNull: false },
+    totalHits: { type: Sequelize.INTEGER, allowNull: false },
+    score: { type: Sequelize.INTEGER, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 var Category = sequelize.define('category', {
-    cid: SCHEMA_ID,
-    name: SCHEMA_STRING
+    cid: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: Sequelize.STRING, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 var Video = sequelize.define('video', {
-    vid: SCHEMA_ID,
-    title: SCHEMA_STRING,
-    url: SCHEMA_STRING,
-    rid: SCHEMA_INTEGER,
-    length: SCHEMA_INTEGER,
-    uid: SCHEMA_INTEGER,
-    hits: SCHEMA_INTEGER,
-    thumnail: SCHEMA_STRING
+    vid: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+    title: { type: Sequelize.STRING, allowNull: false },
+    url: { type: Sequelize.STRING, allowNull: false },
+    rid: { type: Sequelize.INTEGER, allowNull: false },
+    uid: { type: Sequelize.INTEGER, allowNull: false },
+    hits: { type: Sequelize.INTEGER, allowNull: false },
+    thumbnail: { type: Sequelize.STRING, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 var Request = sequelize.define('request', {
-    rid: SCHEMA_ID,
-    title: SCHEMA_STRING,
-    desc: SCHEMA_STRING,
-    uid: SCHEMA_INTEGER,
-    createdDT: SCHEMA_DATE,
-    deadline: SCHEMA_DATE,
+    rid: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+    title: { type: Sequelize.STRING, allowNull: false },
+    desc: { type: Sequelize.STRING, allowNull: false },
+    uid: { type: Sequelize.INTEGER, allowNull: false },
+    createdDT: { type: Sequelize.DATE, allowNull: false },
+    deadline: { type: Sequelize.DATE, allowNull: false },
     // 0: wait, 1: streaming, 2: end
-    status: SCHEMA_INTEGER,
-    price: SCHEMA_INTEGER,
-    cid: SCHEMA_INTEGER,
-    likes: SCHEMA_INTEGER
+    status: { type: Sequelize.INTEGER, allowNull: false },
+    price: { type: Sequelize.INTEGER, allowNull: false },
+    cid: { type: Sequelize.INTEGER, allowNull: false },
+    likes: { type: Sequelize.INTEGER, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 var Reply = sequelize.define('reply', {
-    replyid: SCHEMA_ID,
-    createdDT: SCHEMA_DATE,
-    rid: SCHEMA_INTEGER,
-    text: SCHEMA_STRING
+    reid: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+    uid: { type: Sequelize.INTEGER, allowNull: false },
+    createdDT: { type: Sequelize.DATE, allowNull: false },
+    rid: { type: Sequelize.INTEGER, allowNull: false },
+    text: { type: Sequelize.STRING, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 module.exports = { User, Category, Video, Request, Reply };
