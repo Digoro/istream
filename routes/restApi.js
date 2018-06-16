@@ -51,4 +51,18 @@ router.get('/user/:uid', (req, res, next) => {
   }).then(user => res.json(user))
 });
 
+router.get('/request/:rid', (req, res, next) => {
+  var rid = req.params.rid;
+  User.findOne({
+    where: { rid: rid }
+  }).then(request => res.json(request))
+});
+
+router.get('/video/:vid', (req, res, next) => {
+  var vid = req.params.vid;
+  User.findOne({
+    where: { vid: vid }
+  }).then(video => res.json(video))
+});
+
 module.exports = router;
