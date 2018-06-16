@@ -66,10 +66,10 @@ router.get('/user/:uid', (req, res, next) => {
   }).then(user => res.json(user))
 });
 
-router.get('/request/:rid', (req, res, next) => {
-  var rid = req.params.rid;
+router.get('/request/:uid', (req, res, next) => {
+  var uid = req.params.uid;
   User.findOne({
-    where: { rid: rid }
+    where: { uid: uid }
   }).then(request => res.json(request))
 });
 
