@@ -32,6 +32,14 @@ router.get('/requestVideos/:cid', (req, res, next) => {
   }).then(requests => res.json(requests))
 });
 
+router.get('/requestVideos/top/:cid', (req, res, next) => {
+  var cid = req.params.cid;
+  Request.findAll({
+    order: [['likes', 'DESC']],
+    limit: 5
+  }).then(requests => res.json(requests))
+});
+
 router.post('/requestVideo', (req, res, next) => {
   var title = req.body.title;
   var desc = req.body.desc;
