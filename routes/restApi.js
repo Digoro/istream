@@ -75,7 +75,7 @@ router.get('/request/:rid', (req, res, next) => {
 
 router.get('/video/:vid', (req, res, next) => {
   var vid = req.params.vid;
-  User.findOne({
+  Video.findOne({
     where: { vid: vid }
   }).then(video => res.json(video))
 });
