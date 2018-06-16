@@ -11,7 +11,7 @@ var User = sequelize.define('user', {
     thumbnail: { type: Sequelize.STRING, allowNull: false },
     streamCount: { type: Sequelize.INTEGER, allowNull: false },
     totalHits: { type: Sequelize.INTEGER, allowNull: false },
-    score: { type: Sequelize.INTEGER, allowNull: false }
+    score: { type: Sequelize.FLOAT, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 var Category = sequelize.define('category', {
