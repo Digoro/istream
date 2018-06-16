@@ -82,7 +82,7 @@ router.get('/video/:vid', (req, res, next) => {
 
 router.get('/video/request/:rid', (req, res, next) => {
   var rid = req.params.rid;
-  User.findOne({
+  Video.findOne({
     where: { rid: rid }
   }).then(video => res.json(video))
 });
