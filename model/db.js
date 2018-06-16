@@ -12,7 +12,7 @@ var User = sequelize.define('user', {
     uid: SCHEMA_ID,
     name: SCHEMA_STRING,
     email: SCHEMA_STRING,
-    thumnail: SCHEMA_STRIN,
+    thumnail: SCHEMA_STRING,
     finishedStremingCount: SCHEMA_INTEGER,
     totalHits: SCHEMA_INTEGER,
     score: SCHEMA_INTEGER
