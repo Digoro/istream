@@ -90,4 +90,11 @@ router.post('/reply', (req, res, next) => {
   }).then(resp => res.json('success write reply'))
 })
 
+router.get('/topRequests', (req, res, next) => {
+  User.findAll({
+    order: [['score', 'DESC']],
+    limit: 5
+  }).then(users => res.json(users))
+});
+
 module.exports = router;
