@@ -35,6 +35,7 @@ router.get('/requestVideos/:cid', (req, res, next) => {
 router.get('/requestVideos/top/:cid', (req, res, next) => {
   var cid = req.params.cid;
   Request.findAll({
+    where: { cid: cid },
     order: [['likes', 'DESC']],
     limit: 5
   }).then(requests => res.json(requests))
