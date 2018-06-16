@@ -87,10 +87,10 @@ router.get('/video/request/:rid', (req, res, next) => {
   }).then(video => res.json(video))
 });
 
-router.get('/reply', (req, res, next) => {
-  var rid = req.params.rid;
+router.get('/reply:reid', (req, res, next) => {
+  var reid = req.params.reid;
   User.findOne({
-    where: { rid: rid }
+    where: { reid: reid }
   }).then(reply => res.json(reply))
 })
 
