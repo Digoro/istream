@@ -71,6 +71,13 @@ router.get('/video/:vid', (req, res, next) => {
   }).then(video => res.json(video))
 });
 
+router.get('/reply', (req, res, next) => {
+  var rid = req.params.rid;
+  User.findOne({
+    where: { rid: rid }
+  }).then(reply => res.json(reply))
+})
+
 router.post('/reply', (req, res, next) => {
   var uid = req.body.uid;
   var rid = req.body.rid;
