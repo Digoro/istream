@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
+import moment from 'moment'
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -44,8 +45,8 @@ function ProjectComponent(props) {
           {props.data.description}
         </Typography>
         <Typography component="p">
-          {props.data.price}<br />
-          {props.data.deadline}
+          {props.data.price}$<br />
+          마감일: {moment(props.data.deadline).format('YYYY-MM-DD HH:mm:ss')}
         </Typography>
       </CardContent>
     </Card>

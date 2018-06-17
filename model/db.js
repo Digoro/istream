@@ -34,13 +34,13 @@ var Request = sequelize.define('request', {
     title: { type: Sequelize.STRING, allowNull: false },
     desc: { type: Sequelize.STRING, allowNull: false },
     uid: { type: Sequelize.INTEGER, allowNull: false },
-    createdDT: { type: Sequelize.DATE, allowNull: false },
-    deadline: { type: Sequelize.DATE, allowNull: false },
+    createdDT: { type: Sequelize.DATE, allowNull: false, defaultValue: sequelize.literal('CURRENT_TIMESTAMP') },
+    deadline: { type: Sequelize.DATE, allowNull: false, defaultValue: sequelize.literal('CURRENT_TIMESTAMP') },
     // 0: wait, 1: streaming, 2: end
-    status: { type: Sequelize.INTEGER, allowNull: false },
-    price: { type: Sequelize.INTEGER, allowNull: false },
+    status: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
+    price: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
     cid: { type: Sequelize.INTEGER, allowNull: false },
-    likes: { type: Sequelize.INTEGER, allowNull: false }
+    likes: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 }
 }, SCHEMA_OPTIONS);
 
 var Reply = sequelize.define('reply', {

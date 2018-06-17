@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -57,9 +58,11 @@ function ButtonAppBar(props) {
               ),
             }}
           />
+          <Link to='/stream'>
           <Button variant="contained" color="secondary" className={classes.button}>
             프로젝트 만들기
           </Button>
+          </Link>
           <Button variant="outlined" className={classes.button}>
             Log In / Sign In
           </Button>

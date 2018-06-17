@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import moment from 'moment'
+
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
+import Card from '@material-ui/core/Card';
 
 import ReactPlayer from 'react-player'
 
@@ -10,8 +13,6 @@ import MainAppBar from './MainAppBar'
 
 import './ListContainer.css'
 import './StreamInfoContainer.css'
-
-import Paragraph from './paragraph.png'
 
 
 class StreamInfoContainer extends Component {
@@ -98,8 +99,8 @@ class StreamInfoContainer extends Component {
           <h1>{this.state.request.title}</h1>
           <p>{this.state.request.date}</p>
           <div>
-            <h3>{this.state.request.createdDT}</h3>
-            <span>$ {this.state.request.price}</span>
+            <h3>생성일 {moment(this.state.request.createdDT).format('YYYY-MM-DD HH:mm:ss')}</h3>
+            <p>모금액 {this.state.request.price}$</p>
           </div>
           {this.state.request.status ? 
             <ReactPlayer 
@@ -134,9 +135,9 @@ class StreamInfoContainer extends Component {
           <Divider/>
           <h1>연관 동영상</h1>
           <div className='i-video-cards'>
-            <img src={Paragraph} className='i-video-card'/>
-            <img src={Paragraph} className='i-video-card'/>
-            <img src={Paragraph} className='i-video-card'/>
+            <Card className='i-video-card'/>
+            <Card className='i-video-card' />
+            <Card className='i-video-card' />
           </div>
         </div>
       </div>
