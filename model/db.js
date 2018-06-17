@@ -48,7 +48,9 @@ var Reply = sequelize.define('reply', {
     uid: { type: Sequelize.INTEGER, allowNull: false },
     createdDT: { type: Sequelize.DATE, allowNull: false },
     rid: { type: Sequelize.INTEGER, allowNull: false },
-    text: { type: Sequelize.STRING, allowNull: false }
+    text: { type: Sequelize.STRING, allowNull: false },
+    userName: { type: Sequelize.STRING, allowNull: false },
+    userThumbnail: { type: Sequelize.STRING, allowNull: false }
 }, SCHEMA_OPTIONS);
 
 module.exports = { User, Category, Video, Request, Reply };

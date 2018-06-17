@@ -91,7 +91,9 @@ router.get('/reply/:rid', (req, res, next) => {
   var rid = req.params.rid;
   Reply.findAll({
     where: { rid: rid }
-  }).then(reply => res.json(reply))
+  }).then(reply => {
+    res.json(reply)
+  })
 });
 
 router.post('/reply', (req, res, next) => {
