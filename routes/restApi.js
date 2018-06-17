@@ -87,30 +87,29 @@ router.get('/video/request/:rid', (req, res, next) => {
   }).then(video => res.json(video))
 });
 
-router.get('/reply:reid', (req, res, next) => {
-  var reid = req.params.reid;
-  User.findOne({
-    where: { reid: reid }
-  }).then(reply => res.json(reply))
-})
+router.get('/reply/:rid', (req, res, next) => {
+  var rid = req.params.rid;
+  Reply.findAll({
+    where: { rid: rid }
+  }).then(reply => res.json(reply));
 
-router.post('/reply', (req, res, next) => {
-  var uid = req.body.uid;
-  var rid = req.body.rid;
-  var text = req.body.text;
+  router.post('/reply', (req, res, next) => {
+    var uid = req.body.uid;
+    var rid = req.body.rid;
+    var text = req.body.text;
 
-  Reply.create({
-    uid: uid,
-    rid: rid,
-    text: text,
-  }).then(resp => res.json('success write reply'))
-})
+    Reply.create({
+      uid: uid,
+      rid: rid,
+      text: text,
+    }).then(resp => res.json('success write reply'))
+  })
 
-router.get('/topStreamer', (req, res, next) => {
-  User.findAll({
-    order: [['score', 'DESC']],
-    limit: 5
-  }).then(users => res.json(users))
-});
+  router.get('/topStreamer', (req, res, next) => {
+    User.findAll({
+      order: [['score', 'DESC']],
+      limit: 5
+    }).then(users => res.json(users))
+  });
 
-module.exports = router;
+  module.exports = router;
