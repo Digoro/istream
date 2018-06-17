@@ -51,6 +51,7 @@ router.post('/requestVideo', (req, res, next) => {
   var cid = req.body.cid;
 
   Request.create({
+    rid: 0,
     title: title,
     desc: desc,
     uid: uid,
