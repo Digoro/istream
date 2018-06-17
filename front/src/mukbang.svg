@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M96.52 21.667V.333H85.24v21.334h-28.2l1.297 12.32C79.036 38.52 96.52 52.44 96.52 75l.113 42.667h9.588c4.737 0 8.629-3.467 9.193-7.84l9.306-88.16h-28.2zM.64 112.227c0 2.986 2.538 5.386 5.696 5.386H79.6c3.158 0 5.696-2.4 5.696-5.386V107H.64v5.227zm42.3-69.28C21.79 42.947.64 53.667.64 75h84.6c0-21.333-21.15-32.053-42.3-32.053zM.64 85.667h84.6v10.666H.64V85.667z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="180.103" y="202">먹방</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(149.82 44)" xlink:href="#a"/>
+    </g>
+</svg>

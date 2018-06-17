@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M107.44 75.333V64.667L62.32 38V8.667c0-4.427-3.779-8-8.46-8-4.681 0-8.46 3.573-8.46 8V38L.28 64.667v10.666L45.4 62v29.333l-11.28 8v8L53.86 102l19.74 5.333v-8l-11.28-8V62l45.12 13.333z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="180.103" y="202">여행</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(155.82 49)" xlink:href="#a"/>
+    </g>
+</svg>

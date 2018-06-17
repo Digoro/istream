@@ -1,0 +1,41 @@
+.i-list-title {
+  text-align: center;
+  color: white;
+  background-color: #00e44a;
+  font-size: 55px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.i-list-subtitle {
+  font-size: 16px;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.i-hot-videos-header
+{
+  font-size: 55px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.i-hot-videos {
+  overflow: auto;
+  white-space: nowrap;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 2px;
+  padding-bottom: 72px;
+}
+
+.i-category-projects {
+  padding-left: 100px;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

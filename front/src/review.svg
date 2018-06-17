@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M22.56 11h101.52V.333H22.56c-6.204 0-11.28 4.8-11.28 10.667v58.667H0v16h78.96v-16h-56.4V11zm107.16 10.667H95.88c-3.102 0-5.64 2.4-5.64 5.333v53.333c0 2.934 2.538 5.334 5.64 5.334h33.84c3.102 0 5.64-2.4 5.64-5.334V27c0-2.933-2.538-5.333-5.64-5.333zm-5.64 48h-22.56V32.333h22.56v37.334z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="180.103" y="202">리뷰</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(144.82 60)" xlink:href="#a"/>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+.i-request-form {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.i-request-input {
+  width: 800px;
+}
+
+.i-request-input.price{
+  position: relative;
+  float: right;
+  width: 300px;
+}
+
+.i-request-input.select {
+  position: relative;
+  float: left;
+  width: 280px;
+  margin-right: 16px;
+}
+
+
+.i-request-price {
+  width: 100%;
+}
+
+.i-request-btn-group {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.i-request-btn {
+  width: 160px;
+}
+
+.i-picker-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.i-picker-input {
+  width: 190px;
+}

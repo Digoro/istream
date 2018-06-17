@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M60.084 22.227c6.204 0 11.28-4.8 11.28-10.667S66.288.893 60.084.893s-11.28 4.8-11.28 10.667 5.076 10.667 11.28 10.667zM39.78 96.36l5.64-23.467L57.264 83.56v32h11.28v-40L56.7 64.893l3.384-16c7.332 8 18.612 13.334 31.02 13.334V51.56c-10.716 0-19.74-5.333-24.252-12.8l-5.64-8.533c-2.256-3.2-5.64-5.334-9.588-5.334-1.692 0-2.82.534-4.512.534L17.784 37.16v25.067h11.28V44.093l10.152-3.733-9.024 43.2-27.636-5.333L.3 88.893l39.48 7.467z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="148.706" y="202">액티비티</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(160.82 46)" xlink:href="#a"/>
+    </g>
+</svg>

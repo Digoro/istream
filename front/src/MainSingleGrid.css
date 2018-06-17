@@ -1,0 +1,8 @@
+.i-main-single-grid::before {
+  float: left;
+  content: '';
+  width: 128px;
+  height: 119px;
+  background-color: #00e44a;
+  color: white;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M11.84.333C5.636.333.56 5.133.56 11s5.076 10.667 11.28 10.667S23.12 16.867 23.12 11 18.044.333 11.84.333zm67.68 0c-6.204 0-11.28 4.8-11.28 10.667s5.076 10.667 11.28 10.667S90.8 16.867 90.8 11 85.724.333 79.52.333zm-33.84 0C39.476.333 34.4 5.133 34.4 11s5.076 10.667 11.28 10.667S56.96 16.867 56.96 11 51.884.333 45.68.333z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="164.404" y="202">더보기</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(166.82 92)" xlink:href="#a"/>
+    </g>
+</svg>

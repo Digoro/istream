@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="252" viewBox="0 0 425 252">
+    <defs>
+        <path id="a" d="M56.68 97.867l-8.178-7.04C19.456 65.92.28 49.493.28 29.333.28 12.907 13.929 0 31.3 0c9.814 0 19.232 4.32 25.38 11.147C62.828 4.32 72.246 0 82.06 0c17.371 0 31.02 12.907 31.02 29.333 0 20.16-19.176 36.587-48.222 61.547l-8.178 6.987z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-opacity=".1" d="M1 1h423v250H1z"/>
+        <text fill="#000" fill-opacity=".6" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="36" font-weight="400" letter-spacing=".257" transform="translate(1 1)">
+            <tspan x="180.103" y="202">뷰티</tspan>
+        </text>
+        <use fill="#E93A63" fill-rule="nonzero" transform="translate(155.82 55)" xlink:href="#a"/>
+    </g>
+</svg>
