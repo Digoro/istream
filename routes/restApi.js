@@ -46,7 +46,7 @@ router.post('/requestVideo', (req, res, next) => {
   var title = req.body.title;
   var desc = req.body.desc;
   var uid = req.body.uid;
-  var deadline = req.body.deadline;
+  // var deadline = req.body.deadline;
   var price = req.body.price;
   var cid = req.body.cid;
 
@@ -55,13 +55,13 @@ router.post('/requestVideo', (req, res, next) => {
     title: title,
     desc: desc,
     uid: uid,
-    deadline: deadline,
     price: price,
     cid: cid,
     likes: 0,
     status: 0,
-    createdDT: moment()
-  }).then(resp => res.json('success request video'))
+  }).then(resp => {
+    res.json('success request video')
+  })
 })
 
 router.get('/user/:uid', (req, res, next) => {
