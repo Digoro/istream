@@ -6,6 +6,7 @@ var Request = require('../model/db').Request;
 var User = require('../model/db').User;
 var Reply = require('../model/db').Reply;
 
+var moment = require('moment');
 router.get('/category', (req, res, next) => {
   Category.findAll().then(category => {
     res.json(category)
@@ -55,7 +56,10 @@ router.post('/requestVideo', (req, res, next) => {
     uid: uid,
     deadline: deadline,
     price: price,
-    cid: cid
+    cid: cid,
+    likes: 0,
+    status: 0,
+    createdDT: moment()
   }).then(resp => res.json('success request video'))
 })
 
